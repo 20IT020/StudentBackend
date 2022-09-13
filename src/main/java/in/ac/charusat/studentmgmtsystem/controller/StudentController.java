@@ -1,7 +1,7 @@
 package in.ac.charusat.studentmgmtsystem.controller;
 
 import in.ac.charusat.studentmgmtsystem.model.Student;
-import in.ac.charusat.studentmgmtsystem.payload.LoginRequest;
+
 import in.ac.charusat.studentmgmtsystem.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -35,13 +35,7 @@ public class StudentController {
     // Mappings - URL endpoints
     // Get the list of all student
     @PostMapping("/login")
-    public String doLogin(@RequestBody LoginRequest loginRequest){
-        Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-                loginRequest.getUsername(),loginRequest.getPassword()
-        ));
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        return "Log in Success!!!";
-    }
+
 
     @GetMapping
     public String displayWelcomeMessage(){
