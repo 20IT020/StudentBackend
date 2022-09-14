@@ -20,6 +20,7 @@ import java.util.Optional;
 public class StudentController {
 
     @Autowired
+
     StudentRepository studentRepository;
 
     @Autowired
@@ -34,7 +35,7 @@ public class StudentController {
 
 
     // Mappings - URL endpoints
-    // Get the list of all student
+    // Get the list o  f all student
     @PostMapping("/login")
 
 
